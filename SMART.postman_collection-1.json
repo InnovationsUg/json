@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "a1a0bcd4-8a26-48b0-a5b8-ea38ee0c9dab",
+		"name": "SMART",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ACTIVITIES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"YnJ5dG5icnl0QGdtYWlsLmNvbQ==\",\r\n    \"password\": \"MTIzNDU2\",\r\n    \"provider_id\": \"U1RCQV8xMDBfMDAy\\n\",\r\n    \"category\": \"event\",\r\n    \"type\": \"activity\"\r\n}"
+				},
+				"url": "http://{{url}}/dntthda/"
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"YnJ5dG5icnl0QGdtYWlsLmNvbQ==\",\r\n    \"password\": \"MTIzNDU2\",\r\n    \"type\": \"login\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://{{url}}/dntthda/"
+			},
+			"response": []
+		},
+		{
+			"name": "Validate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"brytnbryt@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"provider_id\": \"\",\r\n    \"instancecode\": \"\",\r\n    \"ticketcode\": \"\",\r\n    \"option\": \"\",\r\n    \"type\": \"validate_ticket\"\r\n}"
+				},
+				"url": "https://demo.smartkts.com/dntthda/"
+			},
+			"response": []
+		},
+		{
+			"name": "PROVIDERID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"YnJ5dG5icnl0QGdtYWlsLmNvbQ==\",\r\n    \"password\": \"MTIzNDU2\",\r\n    \"businessid\": \"U1RCQV8xMDBfMDAy\\n\",\r\n    \"type\": \"providerid\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://{{url}}/dntthda/"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "demo.smartkts.com"
+		}
+	]
+}
